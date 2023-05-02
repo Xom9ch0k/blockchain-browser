@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Main from "@/pages/Main.vue"
-import BlockPage from "@/pages/BlockPage.vue"
-import TransactionPage from '@/pages/TransactionPage.vue'
+import SendPage from "@/pages/SendPage.vue"
+import ContractPage from "@/pages/ContractPage.vue"
 
 const routes = [
     {
@@ -9,18 +9,18 @@ const routes = [
         component: Main
     },
     {
-        path: "/block/:blockNumberOrHash",
-        component: BlockPage
+        path: "/sendEth",
+        component: SendPage
     },
     {
-        path: "/transaction/:txHash",
-        component: TransactionPage
+        path: "/contractPage",
+        component: ContractPage
     }
 ]
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
     routes
-  })
-  
-  export default router
+})
+
+export default router
